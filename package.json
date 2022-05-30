@@ -1,0 +1,53 @@
+{
+  "name": "@parlezvous/parlezvous",
+  "version": "0.0.1",
+  "description": "Package for ParlezVous",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jest.config.js",
+    "prepare": "npm run build",
+    "version": "yarn install --no-immutable && git stage yarn.lock",
+    "postinstall": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+/https://github.com/jmlallier/content-manager-package.git"
+  },
+  "keywords": [],
+  "author": "John-Michael L'Allier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ParlezVousApp/parlezvous/issues"
+  },
+  "homepage": "https://github.com/ParlezVousApp/parlezvous#readme",
+  "devDependencies": {
+    "@babel/parser": "7.16.12",
+    "@babel/traverse": "^7",
+    "@types/jest": "27.4.0",
+    "@typescript-eslint/eslint-plugin": "5.8.0",
+    "@typescript-eslint/parser": "5.8.0",
+    "eslint-plugin-jest": "25.3.4",
+    "lint-staged": "^11.1.2",
+    "jest": "27.4.7",
+    "prettier": "2.5.1",
+    "ts-jest": "27.1.3",
+    "husky": "^6.0.0",
+    "typescript": "4.5.4",
+    "eslint": "^8.7.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-mocha": "^8.1.0"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@messageformat/core": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts,tsx}": "prettier --write"
+  },
+  "packageManager": "yarn@3.1.0"
+}
